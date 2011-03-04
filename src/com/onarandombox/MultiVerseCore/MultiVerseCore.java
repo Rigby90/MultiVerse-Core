@@ -230,8 +230,8 @@ public class MultiVerseCore extends JavaPlugin {
         }
     }
     
-    public MVTeleport getTeleporter() {
-    	return new MVTeleport(this);
+    public MVSafeTeleporter getSafeTeleporter() {
+    	return new MVSafeTeleporter(this);
     }
 	
 	/**
@@ -265,5 +265,8 @@ public class MultiVerseCore extends JavaPlugin {
 	            p.sendMessage(msg);
 	        }
 	    }
+	}
+	public static void debugMsg(String msg){
+	    debugMsg(msg,null);
 	}
 }
